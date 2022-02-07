@@ -12,26 +12,28 @@ document.getElementById("button").onclick=function(){
     else if (textForm3>0) {
       num==3;
     }
-    // 2つの数値を足す
-    var sum = parseInt(textForm1,10) + parseInt(textForm2,10) + parseInt(textForm3,10);
 
-    var a=parseInt(textForm1,10)*parseInt(textForm4,10);
-    a=a/sum;
+    var x=parseInt(textForm1,10)-parseInt(textForm2,10);
+    var y=parseInt(textForm1,10)-parseInt(textForm3,10);
 
-    var b=parseInt(textForm2,10)*parseInt(textForm4,10);
-    b=b/sum;
+    if(x<0){
+      x=x*(-1);
+    }
+    if(y<0){
+      y=y*(-1);
+    }
 
-    var c=parseInt(textForm3,10)*parseInt(textForm4,10);
-    c=c/sum;
+    var z=x+y;
+
+    var a=((x*parseInt(textForm4,10)))/z;
+
+    var b=parseInt(textForm4,10)-a;
 
     // 足し算の結果を別の入力フォームに表示
     var resultForm1 = document.getElementById("resultForm1");
-    resultForm1.value = a;
+    resultForm1.value = b;
 
     var resultForm2 = document.getElementById("resultForm2");
-    resultForm2.value = b;
-
-    var resultForm3 = document.getElementById("resultForm3");
-    resultForm3.value = c;
+    resultForm2.value = a;
 
   };
