@@ -26,8 +26,11 @@ document.getElementById("button").onclick=function(){
     b=b/100;
 
     var c=a-b;
+    c=c*100;
+    c=Math.floor(c);
+    c=c/100;
 
-    d=a*0.1;
+    d=a*(parseInt(textForm4)*(1/10));
     d=d*100;
     d=Math.floor(d);
     d=d/100;
